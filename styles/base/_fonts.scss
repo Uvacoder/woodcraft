@@ -1,0 +1,17 @@
+@font-face {
+    font-family: junicode;
+    src: url(../../public/fonts/Junicode-Regular.ttf)
+}
+
+@font-face {
+    font-family: mulish;
+    src: url(../../public/fonts/Mulish-VariableFont_wght.ttf);
+}
+
+$main-font: junicode;
+
+html, body {
+    font-family: Helvetica, sans-serif;
+    font-family: mulish;
+    color: $main-color;
+}

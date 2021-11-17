@@ -1,0 +1,72 @@
+.global-container {
+    margin: 0 auto;
+    position: relative;
+    height: auto;
+    width: 90vw;
+}
+
+.title-section {
+    height: 90vh;
+    width: 90vw;
+    border-bottom: 1px solid $main-color;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 2%;
+
+    .title-image {
+        position: fixed;
+        opacity: 0.9;
+        right: 0vw;
+        z-index: 1;
+        height: 90vh;
+        border-left: 1px dashed $main-color;
+        border-right: 1px dashed $main-color;
+        border-bottom: 1px dashed $main-color;
+        padding-top: 1%;
+    }
+
+    .header-image {
+        z-index: -1;
+        width: 30vw;
+        position: absolute;
+        left: 0;
+        top: 14vh;
+        opacity: 0.4;
+    }
+
+    .page-title {
+        font-family: junicode;
+        font-size: 5rem;
+        color: $main-color;
+        height: auto;
+        margin: 0;
+        padding-bottom: 2%;
+        margin-bottom: 10vh;
+    }
+
+    .logo-image {
+        width: 4rem;
+        height: 4rem;
+        margin-left: 2rem;
+        border-radius: 50%;
+    }
+
+    @media (min-width: 850px) {
+        .page-title {
+            font-size: 9rem;
+            width: 60vw;
+        }   
+    }
+
+    @media (min-height: 899px) {
+        .page-title {
+            font-size: 12rem;
+            margin-top: 10rem;
+        }   
+    }
+}
+
+.section-title {
+    padding-top: 3%;
+    margin: 0;
+}
