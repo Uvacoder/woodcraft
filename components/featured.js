@@ -13,7 +13,7 @@ const Featured = ({ productData }) => {
 
             <div className='bespoke-product-container'>
                 <h3 className='bespoke-title'>Made Just For You...</h3>
-                <p className='bespoke-product-info'>Can't find what your looking for? We can arrange a customised design on any existing product or create something entirely new!
+                <p className='bespoke-product-info'>Can&apos;t find what your looking for? We can arrange a customised design on any existing product or create something entirely new!
                     <br />
                     <br />
                     Sculptures and furniture are typically made to order. For bespoke projects that will become a feature of your garden or home its important that you have a hand in the creative process. Tell me about your vision and we can arrange a commission.
