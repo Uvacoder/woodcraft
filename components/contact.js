@@ -21,14 +21,14 @@ const Contact = () => {
                     <p>Find us on:</p>
                     <li>
                         <img src='img/facebook.png' className='socials-image' />
-                        <a href='https://www.facebook.com/FiresideWoodcraftFB/?ref=page_internal' target='_blank'>Facebook</a></li>
+                        <a href='https://www.facebook.com/FiresideWoodcraftFB/?ref=page_internal' target='_blank' rel="noreferrer">Facebook</a></li>
                     <li>
                         <img src='img/etsy.png' className='socials-image' />
-                        <a href='https://www.etsy.com/uk/shop/FiresideWoodcraft?ref=profile_header' target='_blank'>Etsy</a>
+                        <a href='https://www.etsy.com/uk/shop/FiresideWoodcraft?ref=profile_header' target='_blank' rel="noreferrer">Etsy</a>
                     </li>
                     <li>
                         <img src='img/instagram.png' className='socials-image' />
-                        <a href='https://www.instagram.com/firesidewoodcraft_/' target='_blank'>Instagram</a>
+                        <a href='https://www.instagram.com/firesidewoodcraft_/' target='_blank' rel="noreferrer">Instagram</a>
                     </li>
                 </ul>
             </div>
