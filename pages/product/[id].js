@@ -37,7 +37,7 @@ const Product = ({ product }) => {
 
 export async function getServerSideProps(req) {
     const { id } = req.query
-    const res = await fetch(`http://localhost:3000/api/product/${id}`);
+    const res = await fetch(`https://fireside-woodcraft.vercel.app/${id}`);
     const data = await res.json();
     return { props: { product: data } }
 }
