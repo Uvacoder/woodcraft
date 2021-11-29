@@ -3,7 +3,7 @@ const Ethos = () => {
         <section className='ethos-section' id='ethos-section'>
             <h2 className='section-title'>ETHOS</h2>
             <div className='ethos-container' >
-                <p data-scroll data-scroll-speed='1'>My name is <span>Matt</span>, I am a British craftsman from Essex. I make handmade wooden objects using traditional green woodworking techniques. When I&apos;m not in the workshop I work as a Nature Reserve Warden managing woodlands for people and wildlife. I source all the wood for my products from my local area and process it in my home workshop. I am passionate about traditional woodworking, wildlife and all things wooden! Through Fireside Woodcraft I hope to capture the essence of the woods in my creations and share my passion with others along the way.<img className='ethos-image' src='img/chesnut.jpg' /></p>
+                <p data-scroll data-scroll-speed='1'>My name is <span>Matt</span>, I am a British craftsman from Essex. I make handmade wooden objects using traditional green woodworking techniques. When I&apos;m not in the workshop I work as a Nature Reserve Warden managing woodlands for people and wildlife. I source all the wood for my products from my local area and process it in my home workshop. I am passionate about traditional woodworking, wildlife and all things wooden! Through Fireside Woodcraft I hope to capture the essence of the woods in my creations and share my passion with others along the way.<img className='ethos-image' src='img/matt.jpg' /></p>
             </div>
             <div>
                 <h3 className='sustain-title'>Sustainability</h3>

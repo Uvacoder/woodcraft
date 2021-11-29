@@ -1,12 +1,12 @@
 import Link from "next/dist/client/link";
 
-const ProductsGallery = ({ productData }) => {
+const FeaturedProduct = ({ productData }) => {
 
     return (
         <>
             {
                 productData.map((product, productIndex) => {
-                    if (productIndex !== 0) {
+                    if (productIndex === 0) {
                         return (
                             <div className='product-container' key={productIndex}>
                                 <h3 className='product-title'>{product.name}</h3>
@@ -24,4 +24,4 @@ const ProductsGallery = ({ productData }) => {
     )
 }
 
-export default ProductsGallery;
+export default FeaturedProduct;

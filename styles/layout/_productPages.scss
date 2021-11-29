@@ -7,13 +7,37 @@
     justify-content: center;
     border-right: 1px solid $main-color;
     border-left: 1px solid $main-color;
+    position: relative;
 
-
-    .product-page-image {
+    .product-image-gallery {
+        position: relative;
         width: 20%;
         padding: 5%;
         border-right: 1px solid $main-color;
-    }   
+
+        .product-page-image {
+            width: 100%;
+            transition: 0.4s;
+        }  
+
+        .gallery-buttons {
+            display: flex;
+            justify-content: center;
+            
+            p {
+                font-size: 2rem;
+                margin: 1rem;
+                user-select: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+
+     
 
     .product-page-details {
         position: relative;

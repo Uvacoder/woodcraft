@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 import Ethos from "../components/ethos";
-import Featured from "../components/featured";
+import Featured from "../components/products";
 import Contact from "../components/contact";
 import { motion } from "framer-motion";
 import Gallery from "../components/gallery";
@@ -18,8 +18,8 @@ export default function Home({ productData }) {
           transition={{ delay: 0.1 }} className='page-title'>Fireside Woodcraft<span><img className='logo-image' src='img/FSW Logo.jpg' /></span></motion.h1>
       </section>
       <Ethos />
-      <Gallery />
       <Featured productData={productData} />
+      <Gallery />
       <Contact />
     </motion.div >
   )
