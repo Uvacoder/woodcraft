@@ -11,6 +11,7 @@ const Featured = ({ productData }) => {
                     <p className='product-info'>Producing high quality, ecologically sustainable products that showcase the natural beauty of wood. Made using hand tools to preserve the natural form of the material. For furniture, gifts, garden sculptures and kitchenware visit our Etsy shop or get in touch.
                     </p>
                     <div className='bespoke-product-container'>
+                        <img className='gouge-image' src='img/gouge.svg' />
                         <h3 className='bespoke-title'>Made Just For You...</h3>
                         <p className='bespoke-product-info'>Can&apos;t find what your looking for? We can arrange a customised design on any existing product or create something entirely new!
                             <br />

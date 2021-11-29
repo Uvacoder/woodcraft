@@ -3,7 +3,6 @@ import Link from "next/dist/client/link";
 import { useRouter } from "next/dist/client/router";
 import { useDispatchCart } from "../../context/cartContext";
 import { useState } from "react";
-import { UseLocoScroll } from "../../hooks/useLocoScroll";
 
 const Product = ({ product }) => {
 
@@ -46,11 +45,14 @@ const Product = ({ product }) => {
 
     return (
         <motion.div className='product-page-container' exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <div className='product-image-gallery'>
+            <motion.div className='product-image-gallery' initial={{ opacity: 0 }, { y: 100 }} animate={{ opacity: 1 }, { y: 0 }} transition={{ delay: 0 }}>
                 {product.images.map((image, imageIndex) => {
                     if (slideIndex === imageIndex + 1) {
                         return (
-                            <img className='product-page-image' src={image} key={imageIndex} />
+                            <motion.img animate={{ opacity: 1 }}
+                                initial={{ opacity: 0.4 }}
+                                exit={{ opacity: 0.4 }}
+                                transition={{ duration: 0.1 }} className='product-page-image' src={image} key={imageIndex} />
                         )
                     }
                 })}
@@ -58,7 +60,7 @@ const Product = ({ product }) => {
                     <p onClick={prevSlide}>⇐</p>
                     <p onClick={nextSlide}>⇒</p>
                 </div>
-            </div>
+            </motion.div>
             <div className='product-page-details'>
                 <Link href='/#products-section' scroll={false}><a className='product-page-link'>Back To Products</a></Link>
                 <h2 className='product-page-title'>{product.name}</h2>

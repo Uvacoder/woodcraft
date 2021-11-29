@@ -37,13 +37,15 @@
     }
 
 
-     
-
     .product-page-details {
         position: relative;
         padding: 5%;
         min-width: 50%;
         max-width: 50%;
+
+        .product-page-link {
+            font-weight: bold;
+        }
 
         .product-page-title {
             padding-top: 5%;

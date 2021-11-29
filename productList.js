@@ -52,8 +52,8 @@ export const products = [
         id: '7',
         name: 'Oak Stool',
         description: 'A traditional handmade oak stool.',
-        imageUrl: 'img/oakstool.jpg',
-        images: ['img/oakstool.jpg'],
+        imageUrl: '../img/oakstool.jpg',
+        images: ['../img/oakstool.jpg'],
         price: 90,
     },
 ]
