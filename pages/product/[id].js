@@ -57,8 +57,8 @@ const Product = ({ product }) => {
                     }
                 })}
                 <div className='gallery-buttons'>
-                    <p onClick={prevSlide}>⇐</p>
-                    <p onClick={nextSlide}>⇒</p>
+                    <p onClick={prevSlide}>←</p>
+                    <p onClick={nextSlide}>→</p>
                 </div>
             </motion.div>
             <div className='product-page-details'>
@@ -77,7 +77,7 @@ const Product = ({ product }) => {
 
 export async function getServerSideProps(req) {
     const { id } = req.query
-    const res = await fetch(`http://localhost:3000/api/product/${id}`);
+    const res = await fetch(`https://fireside-woodcraft.vercel.app/api/product/${id}`);
     const data = await res.json();
     return { props: { product: data } }
 }

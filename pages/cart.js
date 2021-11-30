@@ -45,7 +45,7 @@ const Cart = () => {
                 <div className='checkout-container'>
                     <h3 className='total'>Total: £ {totalPrice}</h3>
                     <div className='buttons'>
-                        <button className='checkout-button cart-button'>Continue Shopping</button>
+                        <Link href='/#products-section' scroll={false} ><button className='checkout-button cart-button'>Continue Shopping</button></Link>
                         <button className='checkout-button cart-button'>Checkout</button>
                     </div>
                 </div>

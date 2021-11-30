@@ -11,18 +11,16 @@
     border-bottom: 1px solid $main-color;
     display: flex;
     align-items: flex-end;
-    padding-bottom: 2%;
 
     .title-image {
         position: absolute;
-        opacity: 0.9;
+        opacity: 0.8;
         right: 0vw;
         z-index: 1;
-        height: 70vh;
+        height: 90vh;
         border-left: 1px dashed $main-color;
         border-right: 1px dashed $main-color;
-        border-bottom: 1px dashed $main-color;
-        padding-top: 2%;
+        padding-top: 1%;
     }
 
     .header-image {

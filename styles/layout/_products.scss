@@ -21,7 +21,7 @@
             width: 60%;
             margin-top: 4%;
             font-size: 1.25rem;
-            padding-bottom: 4%;
+            padding-bottom: 2%;
         }
     
         .bespoke-product-container {
@@ -45,7 +45,7 @@
         }
 
         .gouge-image {
-            width: 12%;
+            width: 20%;
             opacity: 0.6;
         }
 
@@ -55,15 +55,17 @@
             position: relative;
             margin-top: -2%;
             width: 90%;
-            padding: 2%;
+            border-bottom: 1px solid $main-color;
+            
             
             .latest-product {
                 margin: 0;
-                font-size: 2rem;
+                font-size: 1.75rem;
                 font-family: $main-font;
                 text-align: left;
                 border-bottom: 1px solid $main-color;
                 padding-bottom: 2%;
+                color: $main-color;
             }
 
             .product-container {

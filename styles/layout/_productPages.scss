@@ -1,13 +1,14 @@
 .product-page-container {
     display: flex;
     height: 100vh;
-    width: 90vw;
-    margin: 0 auto;
+    width: 100vw;
+    margin-left: -5vw;
     align-items: center;
     justify-content: center;
-    border-right: 1px solid $main-color;
-    border-left: 1px solid $main-color;
     position: relative;
+    background-image: url(../../public/img/productPage.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
 
     .product-image-gallery {
         position: relative;
@@ -23,6 +24,7 @@
         .gallery-buttons {
             display: flex;
             justify-content: center;
+            
             
             p {
                 font-size: 2rem;
