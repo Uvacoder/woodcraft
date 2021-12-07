@@ -15,17 +15,18 @@
     .title-image {
         position: absolute;
         opacity: 0.8;
-        right: 0vw;
         z-index: 1;
-        height: 90vh;
+        height: 50vh;
         border-left: 1px dashed $main-color;
         border-right: 1px dashed $main-color;
         padding-top: 1%;
+        right: 2vw;
+        top: 25vh;
     }
 
     .header-image {
         z-index: 0;
-        width: 30vw;
+        width: 50vw;
         position: absolute;
         left: 0;
         top: 14vh;
@@ -35,38 +36,48 @@
 
     .page-title {
         font-family: junicode;
-        font-size: 4rem;
+        font-size: 3rem;
         color: $main-color;
         height: auto;
         position: relative;
         margin: 0;
         padding-bottom: 2%;
-        margin-bottom: 10vh;
+        margin-bottom: 5vh;
     }
 
     .logo-image {
-        width: 4rem;
-        height: 4rem;
+        width: 2.5rem;
+        height: 2.5rem;
         margin-left: 2rem;
         border-radius: 50%;
     }
 
+    @media (min-width: 650px) {
+        .page-title {
+            font-size: 6rem;
+            margin-top: 10rem;
+        }
+    }
+
     @media (min-width: 850px) {
         .page-title {
-            font-size: 8rem;
+            font-size: 8vw;
             width: 60vw;
-        }   
-    }
+        }  
+        
+        .title-image {
+            height: 90vh;
+            right: 0vw;
+            top: 8vh;
+        }
 
-    @media (min-height: 850px) {
-        .page-title {
-            font-size: 11rem;
-            margin-top: 10rem;
-        }   
-    }
-}
+        .header-image {
+            width: 30vw;
+        }
 
-.section-title {
-    padding-top: 3%;
-    margin: 0;
+        .logo-image {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
 }

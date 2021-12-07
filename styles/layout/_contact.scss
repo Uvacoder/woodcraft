@@ -11,8 +11,8 @@
 
     .contact-links {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
         border-bottom: 1px solid $main-color;
         padding-bottom: 2%;
 
@@ -29,14 +29,13 @@
                 margin: 0;
 
                 h3 {
-                    font-size: 3rem;
+                    font-size: 1.5rem;
                     margin: 0;
                 }
             }
         }
 
         .social-media-links {
-            display: flex;
             flex-direction: column;
             padding: 0;
             margin: 0;
@@ -44,10 +43,9 @@
     
             li {
                 list-style-type: none;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 line-height: 2;
                 display: flex;
-                align-items: flex-end;
                 margin: 0;
                 margin-bottom: 10%;
                 
@@ -64,12 +62,34 @@
                 }
     
                 .socials-image {
-                    width: 5vw;
+                    width: 4rem;
                     margin: 0;
                     margin-right: 10%;
                 }
             }
  
+        }
+
+        @media (min-width: 650px) {
+            .social-media-links {
+                li {
+                    font-size: 2rem;
+                    align-items: flex-end;
+                    justify-content: initial;
+                    
+                }
+            }
+        }
+    }
+
+    @media (min-width: 650px) {
+        .contact-links {
+            flex-direction: row;
+            align-items: center;
+
+            h3 {
+                font-size: 2rem;
+            }
         }
     }
 }
