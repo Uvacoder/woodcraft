@@ -18,7 +18,7 @@ const Gallery = () => {
             <h2 className='section-title'>GALLERY</h2>
             <div className="gallery-buttons">
                 <button className="button-left" onClick={() => handleGalleryScrollLeft()}><img src='img/leftArrow.png' /></button>
-                <button className="button-right" onClick={() => handleGalleryScrollRight()}><img src='img/rightArrow.png' /></button>
+                <button className="button-right" onClick={() => handleGalleryScrollRight()}><img src='img/RightArrow.png' /></button>
             </div>
             <motion.div className="gallery-scroll-container" ref={containerRef}>
                 <div className="gallery-element gallery-element-1">
