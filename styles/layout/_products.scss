@@ -2,12 +2,16 @@
     margin:0;
     border-bottom: 1px solid $main-color;
 
+    h2 {
+        padding: 2rem 0;
+        margin: 0;
+    }
+
     .featured-section {
         height: auto;
         width: 100%;
         margin: 0 auto;
         display: flex;
-        margin-top: 2%;
         position: relative;
         flex-direction: column;
         justify-content: space-between;
@@ -21,7 +25,6 @@
     
         .product-info {
             width: 100%;
-            margin-top: 4%;
             font-size: 1.25rem;
             padding-bottom: 2%;
         }

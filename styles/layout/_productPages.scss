@@ -48,6 +48,11 @@
 
         .product-page-link {
             font-weight: bold;
+            transition: 0.4s;
+
+            &:hover {
+                opacity: 0.9;
+            }
         }
 
         .product-page-title {

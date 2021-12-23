@@ -1,4 +1,5 @@
 import Link from "next/dist/client/link";
+import { motion } from "framer-motion";
 
 const FeaturedProduct = ({ productData }) => {
 
@@ -13,7 +14,7 @@ const FeaturedProduct = ({ productData }) => {
                                 <img src={product.imageUrl} className="product-image" />
                                 <div className='product-details'>
                                     <p className='product-price'>£{product.price}</p>
-                                    <Link href='/product/[id]' as={`/product/${product.id}`}><button className='more-details'>Details <span className='button-arrow'> →</span></button></Link>
+                                    <Link href='/product/[id]' as={`/product/${product.id}`}><motion.button whileTap={{ scale: 0.5 }} className='more-details'>Details <span className='button-arrow'> →</span></motion.button></Link>
                                 </div >
                             </div>
                         )

@@ -3,11 +3,11 @@ import { useCart } from "../context/cartContext";
 
 const CartIcon = () => {
 
-    const items = useCart()
+    const cartItems = useCart()
 
     return (
         <div>
-            <Link href='/cart'><a className='cart-icon'>CART ({items.length})</a></Link>
+            <Link href='/cart'><a className='cart-icon'>CART ({cartItems.length})</a></Link>
         </div>
     );
 }

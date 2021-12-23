@@ -1,18 +1,25 @@
 import CartIcon from "./cart-icon";
 import Link from "next/dist/client/link";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
+
+    const handleScroll = (location) => {
+        document.querySelector(location).scrollIntoView({
+            behavior: 'smooth',
+        })
+    }
 
     return (
         <nav>
             <ul>
-                <li><Link href='/'><a className='nav-link'>HOME</a></Link></li>
-                <li><a className='nav-link' href='#ethos-section'>ETHOS</a></li>
-                <li><a className='nav-link' href='#products-section'>PRODUCTS</a></li>
-                <li><a className='nav-link' href='#contact-section'>CONTACT</a></li>
+                <motion.li whileTap={{ scale: 0.9 }} ><a className='home-link' onClick={() => handleScroll('#ethos-section')}>ETHOS</a></motion.li>
+                <motion.li whileTap={{ scale: 0.9 }}><a className='home-link' onClick={() => handleScroll('#products-section')}>PRODUCTS</a></motion.li>
+                <motion.li whileTap={{ scale: 0.9 }}><a className='home-link' onClick={() => handleScroll('#gallery-section')}>GALLERY</a></motion.li>
+                <motion.li whileTap={{ scale: 0.9 }}><a className='home-link' onClick={() => handleScroll('#contact-section')}>CONTACT</a></motion.li>
             </ul>
             <CartIcon />
-        </nav>
+        </nav >
     );
 }
 

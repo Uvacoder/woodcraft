@@ -1,34 +1,88 @@
 .gallery-section {
     padding-bottom: 5%;
     width: 100%;
-    height: auto;
+    height: 100vh;
+    overflow-x: hidden;
+    position: relative;
 
     h2 {
         padding-bottom: 2%;
     }
 
-    img {
-        width: 90vw;
+    .gallery-buttons {
+        position: absolute;
+        right: 0%;
+        top: 67vh;
+        background:transparent;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+
+        button {
+            color: $main-color;
+            background: none;
+            margin: 0.5rem 0rem;
+            border: none;
+
+            img {
+                height: 8vh;
+            }
+
+            &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+            }
+        }
     }
 
-    h3 {
-        font-size: 1rem;
-    }
 
-    @media (min-width: 850px) {
+    .gallery-scroll-container {
+        height: 65vh;
+        width: 200vw;
+        display: flex;
+        align-items: center;
 
-        .h3-1 {
-            margin-left: 30vw;
-        }
-    
-        .img-1 {
-            width: 60vw;
-            margin-left: 30vw;
-        }
-    
-        .img-2 {
-            width: 60vw;
-        }
+        .gallery-element {
+            height: 100%;
+            width: 90vw;
+            position: relative;
+            transition: 0.8s;
 
+            img {
+                height: 100%;
+                z-index: -1;
+                margin-left: 2%;
+                
+            }
+        
+            h3 {
+                font-size: 1rem;
+                margin: 2% 0 -2% 4%;
+                z-index: 20;
+                display: block;
+                width: fit-content;
+                position: relative;
+                padding: 0.5rem 1.5rem;
+                color: $second-color;
+                background: $main-color;
+                box-shadow: 4px 4px 2px rgba(255, 255, 255, 0.1);
+            }
+
+            p {
+                position: absolute;
+                top: 12%;
+                right: 0;
+                width: 90%;
+                background: $main-color;
+                color: $second-color;
+                width: 15vw;
+                padding: 3%;
+                font-family: $main-font;
+                font-size: 1.1rem;
+                margin: 0;
+            }
+        }
     }
 }

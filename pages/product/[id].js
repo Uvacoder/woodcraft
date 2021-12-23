@@ -6,7 +6,6 @@ import { useState } from "react";
 
 const Product = ({ product }) => {
 
-
     const router = useRouter();
     const dispatch = useDispatchCart();
 
@@ -14,16 +13,14 @@ const Product = ({ product }) => {
         dispatch({ type: 'ADD_ITEM', item })
     }
 
-    const buyNow = (item) => {
-        dispatch({ type: 'BUY_NOW', item })
+    const buyNow = async (item) => {
+        await dispatch({ type: 'BUY_NOW', item })
         router.push('/cart')
     }
 
     const [slideIndex, setSlideIndex] = useState(1);
 
     const selectedGalleryLength = product.images.length
-
-    console.log(product.images.length)
 
     const nextSlide = () => {
         if (slideIndex !== selectedGalleryLength) {

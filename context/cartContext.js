@@ -1,36 +1,42 @@
-import { createContext, useContext, useReducer } from "react";
+import { createContext, useContext, useEffect, useReducer } from "react";
+import { getCookie, setCookie } from "../hooks/useCookie";
 
 const CartStateContext = createContext();
 const CartDispatchContext = createContext();
 
-const reducer = (state, action,) => {
+const reducer = (state, action) => {
 
     switch (action.type) {
         case 'ADD_ITEM':
-            let cartUpdate = [...state, action.item]
-            return cartUpdate
+            let addItem = [...state, action.item]
+            setCookie('cart', addItem)
+            return getCookie('cart')
         case 'BUY_NOW':
-            cartUpdate = [...state, action.item]
-            return [...state, action.item]
+            let buyNow = [...state, action.item]
+            setCookie('cart', buyNow)
+            return getCookie('cart')
         case 'REMOVE_ITEM':
-            cartUpdate = [...state];
-            cartUpdate.splice(action.index, 1)
-            return cartUpdate
+            let removeItem = [...state];
+            removeItem.splice(action.index, 1)
+            setCookie('cart', removeItem)
+            return getCookie('cart')
         default:
             throw new Error(`unknown action ${action.type}`)
     }
 }
 
 export const CartProvider = ({ children }) => {
-    const [state, dispatch] = useReducer(reducer, []);
 
+    const initialState = getCookie('cart')
+
+    const [state, dispatch] = useReducer(reducer, initialState)
 
     return (
-        <CartDispatchContext.Provider value={dispatch}>
-            <CartStateContext.Provider value={state}>
+        <CartStateContext.Provider value={state}>
+            <CartDispatchContext.Provider value={dispatch}>
                 {children}
-            </CartStateContext.Provider>
-        </CartDispatchContext.Provider>
+            </CartDispatchContext.Provider>
+        </CartStateContext.Provider>
     )
 }
 
