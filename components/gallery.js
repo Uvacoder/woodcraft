@@ -24,7 +24,7 @@ const Gallery = () => {
                 <div className="gallery-element gallery-element-1">
                     <h3 className='h3-1'>BUG HOTEL</h3>
                     <img src='img/bughotel.jpg' className='img-1' />
-                    <div className="gallery-text-container"><p className="gallery-text">Our bug hotels are designed with an ecological functionality in mind. They don't just look good, they work for the insects that live in them too.</p></div>
+                    <div className="gallery-text-container"><p className="gallery-text">Our bug hotels are designed with an ecological functionality in mind. They don&apos;t just look good, they are made to meet the needs of the insects that live in them too.</p></div>
                 </div>
                 <div className="gallery-element gallery-element-2">
                     <h3 className='h3-2'>STOOL</h3>
