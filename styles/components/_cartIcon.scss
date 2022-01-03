@@ -1,5 +1,7 @@
 .cart-icon {
     width: auto;
+    font-weight: bold;
+    font-size: 0.9rem;
 
     &:after {
         content: '';
@@ -18,5 +20,11 @@
 
     &:hover {
         cursor: pointer;
+    }
+}
+
+@media (min-width: 850px) {
+    .cart-icon {
+        font-size: 1rem;
     }
 }

@@ -12,11 +12,12 @@
 
     .contact-image {
         position: absolute;
-        width: 28vw;
+        width: 25vw;
         bottom: 4%;
         left: 26%;
         z-index: 0;
         opacity: 0.6;
+        display: none;
     }
 
     p {
@@ -124,6 +125,10 @@
             h3 {
                 font-size: 2rem;
             }
+        }
+
+        .contact-image {
+            display: initial;
         }
     }
 }

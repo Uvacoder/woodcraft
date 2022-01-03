@@ -1,35 +1,50 @@
 import { motion } from "framer-motion";
-import { useRef } from "react";
+import { useState } from "react";
+import { galleryList } from "../galleryList";
 
 const Gallery = () => {
 
-    const containerRef = useRef()
+    const [galleryItem, setGalleryItem] = useState(0)
 
     const handleGalleryScrollLeft = () => {
-        document.querySelectorAll('.gallery-element').forEach((el) => el.style.transform = 'translateX(0vw)')
+        if (galleryItem === 0) {
+            setGalleryItem(galleryList.length - 1)
+        } else {
+            setGalleryItem(galleryItem - 1)
+        }
     }
 
     const handleGalleryScrollRight = () => {
-        document.querySelectorAll('.gallery-element').forEach((el) => el.style.transform = 'translateX(-90vw)')
+        if (galleryItem + 1 === galleryList.length) {
+            setGalleryItem(0)
+        } else {
+            setGalleryItem(galleryItem + 1)
+        }
     }
 
     return (
         <section className='gallery-section' id='gallery-section'>
             <h2 className='section-title'>GALLERY</h2>
-            <div className="gallery-buttons">
-                <button className="button-left" onClick={() => handleGalleryScrollLeft()}><img src='img/leftArrow.png' /></button>
-                <button className="button-right" onClick={() => handleGalleryScrollRight()}><img src='img/RightArrow.png' /></button>
+            <div className="gallery-navigation">
+                <h3 className="explore-text">Explore...</h3>
+                <div className="gallery-buttons">
+                    <button className="button-left" onClick={() => handleGalleryScrollLeft()}><img src='img/leftArrow.png' /></button>
+                    <button className="button-right" onClick={() => handleGalleryScrollRight()}><img src='img/RightArrow.png' /></button>
+                </div>
             </div>
-            <motion.div className="gallery-scroll-container" ref={containerRef}>
-                <div className="gallery-element gallery-element-1">
-                    <h3 className='h3-1'>BUG HOTEL</h3>
-                    <img src='img/bughotel.jpg' className='img-1' />
-                    <div className="gallery-text-container"><p className="gallery-text">Our bug hotels are designed with an ecological functionality in mind. They don&apos;t just look good, they are made to meet the needs of the insects that live in them too.</p></div>
-                </div>
-                <div className="gallery-element gallery-element-2">
-                    <h3 className='h3-2'>STOOL</h3>
-                    <img src='img/woodleg.jpg' className='img-2' />
-                </div>
+            <motion.div className="gallery-scroll-container" >
+                {galleryList.map((slide, slideIndex) => {
+                    if (slideIndex === galleryItem) {
+                        return (
+                            <motion.div className="gallery-element gallery-element-1" key={slideIndex} exit={{ x: -400 }} initial={{ x: 50, opacity: 0.5 }} animate={{ x: 0, opacity: 1 }} transition={{ duration: 0.3 }}>
+                                <h3 className='h3-1'>{slide.name}</h3>
+                                <img src={slide.imageUrl} className='img-1' />
+                                <div className="gallery-text-container"><p className="gallery-text">{slide.description}</p></div>
+                            </motion.div>
+
+                        )
+                    }
+                })}
             </motion.div>
         </section >
     );

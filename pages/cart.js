@@ -1,8 +1,7 @@
 import Link from "next/dist/client/link";
 import { motion } from "framer-motion";
 import { useDispatchCart } from "../context/cartContext";
-import { useState, useEffect } from "react";
-import { getCookie } from "../hooks/useCookie";
+import Head from "next/head";
 import { useCart } from "../context/cartContext";
 import { useRouter } from "next/dist/client/router";
 
@@ -31,39 +30,51 @@ const Cart = () => {
 
     if (items.length === 0) {
         return (
+            <>
+                <Head>
+                    <title>Cart | Fireside Woodcraft</title>
+                    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+                </Head>
+                <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                    <nav className="cart-nav">
+                        <ul><Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
+                        </ul>
+                    </nav>
+                    <div className='cart-list-container'>
+                        <h2>Cart</h2>
+                        <p>Cart is empty.</p>
+                    </div>
+                </motion.div>
+            </>
+        )
+    }
+    return (
+        <>
+            <Head>
+                <title>Cart | Fireside Woodcraft</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                 <nav className="cart-nav">
-                    <ul><Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
+                    <ul>
+                        <Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
                     </ul>
                 </nav>
                 <div className='cart-list-container'>
                     <h2>Cart</h2>
-                    <p>Cart is empty.</p>
-                </div>
-            </motion.div>
-        )
-    }
-    return (
-        <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-            <nav className="cart-nav">
-                <ul>
-                    <Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
-                </ul>
-            </nav>
-            <div className='cart-list-container'>
-                <h2>Cart</h2>
-                {items.map((item, itemIndex) => (
-                    <CartItem index={itemIndex} removeItem={removeItem} item={item} key={itemIndex} />
-                ))}
-                <div className='checkout-container'>
-                    <h3 className='total'>Total: £ {totalPrice}</h3>
-                    <div className='buttons'>
-                        <Link href='/#products-section' scroll={false} ><button className='checkout-button cart-button'>Continue Shopping</button></Link>
-                        <button className='checkout-button cart-button'>Checkout</button>
+                    {items.map((item, itemIndex) => (
+                        <CartItem index={itemIndex} removeItem={removeItem} item={item} key={itemIndex} />
+                    ))}
+                    <div className='checkout-container'>
+                        <h3 className='total'>Total: £ {totalPrice}</h3>
+                        <div className='buttons'>
+                            <Link href='/#products-section' scroll={false} ><button className='checkout-button cart-button'>Continue Shopping</button></Link>
+                            <button className='checkout-button cart-button'>Checkout</button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </motion.div >
+            </motion.div >
+        </>
     );
 }
 
