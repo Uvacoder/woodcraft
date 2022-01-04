@@ -4,6 +4,7 @@ import { useRouter } from "next/dist/client/router";
 import { useDispatchCart } from "../../context/cartContext";
 import { useState } from "react";
 import Head from "next/head";
+import Footer from "../../components/footer";
 
 const Product = ({ product }) => {
 
@@ -75,6 +76,7 @@ const Product = ({ product }) => {
                     </div>
                 </div >
             </motion.div >
+            <Footer />
         </>
     )
 }

@@ -4,6 +4,7 @@ import { useDispatchCart } from "../context/cartContext";
 import Head from "next/head";
 import { useCart } from "../context/cartContext";
 import { useRouter } from "next/dist/client/router";
+import Footer from "../components/footer";
 
 const Cart = () => {
 
@@ -35,7 +36,7 @@ const Cart = () => {
                     <title>Cart | Fireside Woodcraft</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 </Head>
-                <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="cart-container">
                     <nav className="cart-nav">
                         <ul><Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
                         </ul>
@@ -45,6 +46,7 @@ const Cart = () => {
                         <p>Cart is empty.</p>
                     </div>
                 </motion.div>
+                <Footer />
             </>
         )
     }
@@ -54,7 +56,7 @@ const Cart = () => {
                 <title>Cart | Fireside Woodcraft</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+            <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="cart-container">
                 <nav className="cart-nav">
                     <ul>
                         <Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
@@ -74,6 +76,7 @@ const Cart = () => {
                     </div>
                 </div>
             </motion.div >
+            <Footer />
         </>
     );
 }

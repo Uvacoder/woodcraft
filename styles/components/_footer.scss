@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1%;
+
+    ul {
+        li {
+            list-style-type: none;
+            line-height: 1.5;
+            font-size: 0.9rem;
+
+            a {
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+}

@@ -1,5 +1,4 @@
 import CartIcon from "./cart-icon";
-import Link from "next/dist/client/link";
 import { motion } from "framer-motion";
 
 const Navbar = () => {

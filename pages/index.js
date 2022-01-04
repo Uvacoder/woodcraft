@@ -5,6 +5,7 @@ import Contact from "../components/contact";
 import { motion } from "framer-motion";
 import Gallery from "../components/gallery";
 import Head from 'next/head';
+import Footer from "../components/footer";
 
 export default function Home({ productData }) {
 
@@ -28,6 +29,7 @@ export default function Home({ productData }) {
         <Featured productData={productData} />
         <Gallery />
         <Contact />
+        <Footer />
       </motion.div >
     </>
   )
