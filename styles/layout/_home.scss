@@ -6,7 +6,7 @@
 }
 
 .title-section {
-    height: 90vh;
+    height: 85vh;
     width: 100%;
     border-bottom: 1px solid $main-color;
     display: flex;
@@ -14,19 +14,19 @@
 
     .title-image {
         position: absolute;
-        opacity: 0.8;
+        opacity: 1;
         z-index: 1;
         height: 50vh;
         border-left: 1px dashed $main-color;
         border-right: 1px dashed $main-color;
         padding-top: 1%;
-        right: 2vw;
+        right: 0vw;
         top: 25vh;
     }
 
     .header-image {
         z-index: 0;
-        width: 50vw;
+        width: 90vw;
         position: absolute;
         left: 0;
         top: 14vh;
@@ -69,6 +69,7 @@
             height: 90vh;
             right: 0vw;
             top: 8vh;
+            opacity: 0.8;
         }
 
         .header-image {
