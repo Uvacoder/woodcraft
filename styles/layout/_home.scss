@@ -44,7 +44,7 @@
         font-size: 1.7rem;
         letter-spacing: 2px;
         z-index: 9;
-        background: $main-color;
+        background: lighten($main-color, 15%);
         color: $second-color;
         padding: 0.4rem 0.8rem 1.2rem 0.8rem ;
     }
