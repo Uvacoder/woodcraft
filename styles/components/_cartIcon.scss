@@ -2,6 +2,11 @@
     width: auto;
     font-weight: bold;
     font-size: 0.9rem;
+    position: relative;
+
+    &:hover {
+        cursor: pointer;
+    }
 
     &:after {
         content: '';
@@ -10,17 +15,17 @@
         height: 5px;
         background-color: lighten($main-color, 40%);
         display: block;
-        margin-top: -5px;
+        position: absolute;
         transition: 0.8s;
+        z-index: -1;
+        margin: 0 auto;
+        bottom: 5%;
     }
 
     &:hover:after {
         width: 90%;
     }
 
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 @media (min-width: 850px) {

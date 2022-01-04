@@ -5,10 +5,17 @@ nav {
     align-items: center;
     position: fixed;
     height: 10vh;
-    width: 90vw;
+    width: 92vw;
     border-bottom: 1.3px solid $main-color;
     background-color: $second-color;
     z-index: 10;
+    padding: 0 4vw;
+
+    .nav-logo {
+        border-radius: 50%;
+        height: 3vh;
+        margin-right: 0.5rem;
+    }
 
     .home-link {
         padding: 1vw;
@@ -29,6 +36,10 @@ nav {
             -moz-user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 1;
     
             &:after {
                 content: '';
@@ -37,8 +48,11 @@ nav {
                 height: 5px;
                 background-color: lighten($main-color, 40%);
                 display: block;
-                margin-top: -5px;
+                position: absolute;
                 transition: 0.8s;
+                z-index: -1;
+                margin: 0 auto;
+                bottom: 20%;
             }
     
             &:hover:after {
@@ -47,7 +61,7 @@ nav {
 
             .home-link {
                 font-weight: 300;
-                font-size: 0.8rem;
+                font-size: 0.7rem;
                 text-decoration: none;
                 padding: 1vw;
                 color: $main-color;
@@ -69,11 +83,17 @@ nav {
             align-items: center;
 
             li {
-                .nav-link {
-                    font-size: 1rem;
+                &:after {
+                    bottom: 35%;
+                }
+                .home-link {
+                    font-size: 0.8rem;
                 }
             }
             
+            .nav-logo {
+                height: 5vh;
+            }
             
         }
     }

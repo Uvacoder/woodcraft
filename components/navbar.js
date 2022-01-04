@@ -12,6 +12,7 @@ const Navbar = () => {
     return (
         <nav>
             <ul>
+                <img src="img/FSW logo.jpg" className="nav-logo" />
                 <motion.li whileTap={{ scale: 0.9 }} ><a className='home-link' onClick={() => handleScroll('#ethos-section')}>ETHOS</a></motion.li>
                 <motion.li whileTap={{ scale: 0.9 }}><a className='home-link' onClick={() => handleScroll('#products-section')}>PRODUCTS</a></motion.li>
                 <motion.li whileTap={{ scale: 0.9 }}><a className='home-link' onClick={() => handleScroll('#gallery-section')}>GALLERY</a></motion.li>

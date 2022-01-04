@@ -2,6 +2,8 @@
     width: 90vw;
     margin: 0 auto;
     padding-top: 5%;
+    border-bottom: 1px solid $main-color;
+    margin-bottom: 1%;
 
     a {
         font-size: 0.9rem;
@@ -9,5 +11,9 @@
         &:hover {
             opacity: 0.8;
         }
+    }
+
+    h2 {
+        padding-top: 2vh;
     }
 }

@@ -36,17 +36,21 @@ const Cart = () => {
                     <title>Cart | Fireside Woodcraft</title>
                     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 </Head>
-                <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="cart-container">
-                    <nav className="cart-nav">
-                        <ul><Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
-                        </ul>
-                    </nav>
-                    <div className='cart-list-container'>
-                        <h2>Cart</h2>
-                        <p>Cart is empty.</p>
-                    </div>
-                </motion.div>
-                <Footer />
+                <nav className="cart-nav">
+                    <ul><Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
+                    </ul>
+                </nav>
+                <div className='global-container' id='global-container'>
+                    <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="cart-container">
+                        <div className="empty-cart-message">
+                            <img src='img/cart.jpg' className="cart-image" />
+                            <h3>Oops, cart is empty.</h3>
+                        </div>
+                    </motion.div>
+
+                    <Footer />
+                </div>
+
             </>
         )
     }
@@ -56,27 +60,31 @@ const Cart = () => {
                 <title>Cart | Fireside Woodcraft</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="cart-container">
-                <nav className="cart-nav">
-                    <ul>
-                        <Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
-                    </ul>
-                </nav>
-                <div className='cart-list-container'>
-                    <h2>Cart</h2>
-                    {items.map((item, itemIndex) => (
-                        <CartItem index={itemIndex} removeItem={removeItem} item={item} key={itemIndex} />
-                    ))}
-                    <div className='checkout-container'>
-                        <h3 className='total'>Total: £ {totalPrice}</h3>
-                        <div className='buttons'>
-                            <Link href='/#products-section' scroll={false} ><button className='checkout-button cart-button'>Continue Shopping</button></Link>
-                            <button className='checkout-button cart-button'>Checkout</button>
+
+            <nav className="cart-nav">
+                <ul>
+                    <Link href='/'><li><a className='cart-home-link'>HOME</a></li></Link>
+                </ul>
+            </nav>
+            <div className='global-container' id='global-container'>
+                <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="cart-container">
+                    <div className='cart-list-container'>
+                        <h2>Cart</h2>
+                        {items.map((item, itemIndex) => (
+                            <CartItem index={itemIndex} removeItem={removeItem} item={item} key={itemIndex} />
+                        ))}
+                        <div className='checkout-container'>
+                            <h3 className='total'>Total: £ {totalPrice}</h3>
+                            <div className='buttons'>
+                                <Link href='/#products-section' scroll={false} ><button className='checkout-button cart-button'>Continue Shopping</button></Link>
+                                <button className='checkout-button cart-button'>Checkout</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </motion.div >
-            <Footer />
+                </motion.div >
+
+                <Footer />
+            </div>
         </>
     );
 }

@@ -9,12 +9,14 @@ const Shipping = () => {
                 <title>Shipping | Fireside Woodcraft</title>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
-            <section className="terms-container">
-                <Link href='/'><a>&#8592; Back to Home</a></Link>
-                <h2>Shipping Infomation</h2>
-                <p></p>
-            </section>
-            <Footer />
+            <div className='global-container' id='global-container'>
+                <section className="terms-container">
+                    <Link href='/'><a>&#8592; Back to Home</a></Link>
+                    <h2>Shipping Infomation</h2>
+                    <p></p>
+                </section>
+                <Footer />
+            </div>
         </>
     );
 }
