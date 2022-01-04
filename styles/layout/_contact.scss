@@ -14,7 +14,7 @@
         position: absolute;
         width: 25vw;
         bottom: 4%;
-        left: 26%;
+        left: 30%;
         z-index: 0;
         opacity: 0.6;
         display: none;
@@ -63,6 +63,10 @@
                 line-height: 2;
                 margin: 0;
 
+                p {
+                    font-size: 1.1rem;
+                }
+
                 h3 {
                     font-size: 1.5rem;
                     margin: 0;
@@ -75,10 +79,14 @@
             padding: 0;
             margin: 0;
             padding-right:2%;
+
+            p {
+                font-size: 1.1rem;
+                font-weight: bold;
+            }
     
             li {
                 list-style-type: none;
-                font-size: 1.5rem;
                 line-height: 2;
                 display: flex;
                 margin: 0;
@@ -89,6 +97,7 @@
                     margin: 0;
                     padding: 0;
                     transition: 0.3s;
+                    font-size: 1.5rem;
     
                     &:hover {
                         cursor: pointer;

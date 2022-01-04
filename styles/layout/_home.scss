@@ -11,27 +11,38 @@
     border-bottom: 1px solid $main-color;
     display: flex;
     align-items: flex-end;
+    padding-top: 10vh;
 
     .title-image {
         position: absolute;
-        opacity: 1;
+        opacity: 0.9;
         z-index: 1;
-        height: 50vh;
+        height: 45vh;
         border-left: 1px dashed $main-color;
         border-right: 1px dashed $main-color;
         padding-top: 1%;
         right: 0vw;
-        top: 25vh;
+        top: 20vh;
     }
 
     .header-image {
         z-index: 0;
-        width: 90vw;
+        width: 70vw;
         position: absolute;
         left: 0;
         top: 14vh;
-        opacity: 0.4;
+        opacity: 0;
         border-left: 1px dashed $main-color;
+    }
+
+    .welcome-text {
+        position: absolute;
+        font-family: $main-font;
+        left: 0;
+        top: 65vh;
+        font-size: 1.7rem;
+        letter-spacing: 2px;
+        z-index: 9;
     }
 
     .page-title {
@@ -43,6 +54,7 @@
         margin: 0;
         padding-bottom: 2%;
         margin-bottom: 5vh;
+        z-index: 2;
     }
 
     .logo-image {
@@ -57,13 +69,23 @@
             font-size: 6rem;
             margin-top: 10rem;
         }
+
+        .welcome-text {
+            top: 60vh;
+            font-size: 2rem;
+        }
     }
 
     @media (min-width: 850px) {
         .page-title {
             font-size: 8vw;
             width: 50vw;
-        }  
+        }
+        
+        .welcome-text {
+            top: 35vh;
+            left: 48%;
+        }
         
         .title-image {
             height: 90vh;

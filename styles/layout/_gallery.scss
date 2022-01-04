@@ -12,8 +12,7 @@
     .gallery-navigation {
         position: relative;
         right: 0;
-        top: 0;
-
+        top: 4vh;
 
         .explore-text {
             font-size: 2rem;
@@ -25,12 +24,11 @@
     
         .gallery-buttons {
             background: transparent;
-            z-index: 20;
             display: flex;
             align-items: center;
             justify-content: flex-end;
             position: relative;
-            z-index: 20;
+            z-index: 9;
             
             button {
                 color: $main-color;
@@ -72,7 +70,7 @@
             h3 {
                 font-size: 1rem;
                 margin: 2% 0 -2% 4%;
-                z-index: 20;
+                z-index: 9;
                 display: block;
                 width: fit-content;
                 position: relative;

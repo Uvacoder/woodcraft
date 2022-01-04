@@ -19,9 +19,10 @@ export default function Home({ productData }) {
         <section className='title-section' >
           <motion.img src='img/oldtool.jpg' className='title-image' initial={{ x: 60 }} animate={{ x: 0 }} />
           <motion.img src='img/willow.jpg' className='header-image' initial={{ opacity: 0 }} animate={{ opacity: 0.4 }} transition={{ duration: 1.5 }} />
-          <motion.h1 initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.4 }} className='page-title'>Fireside Woodcraft<span><img className='logo-image' src='img/FSW Logo.jpg' /></span></motion.h1>
+          <motion.h2 className="welcome-text" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>Welcome To...</motion.h2>
+          <motion.h1 initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5, duration: 1 }} className='page-title'>Fireside Woodcraft<span><img className='logo-image' src='img/FSW Logo.jpg' /></span></motion.h1>
         </section>
         <Ethos />
         <Featured productData={productData} />

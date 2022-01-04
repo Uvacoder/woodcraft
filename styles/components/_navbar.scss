@@ -3,10 +3,12 @@ nav {
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
-    position: relative;
+    position: fixed;
     height: 10vh;
     width: 90vw;
-    border-bottom: 1px solid $main-color;
+    border-bottom: 1.3px solid $main-color;
+    background-color: $second-color;
+    z-index: 10;
 
     .home-link {
         padding: 1vw;
