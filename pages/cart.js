@@ -58,7 +58,7 @@ const Cart = () => {
                         </div>
                     </motion.div >}
                 {items.length === 0 && <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="empty-cart-container">
-                    <motion.img exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} src='img/cart.jpg' className="old-cart-image" />
+                    <motion.img exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} src='img/cart.jpg' className="old-cart-image" />
                     <h3 className="empty-cart-text">Oops, cart is empty.</h3>
                 </motion.div>}
                 <Footer />
