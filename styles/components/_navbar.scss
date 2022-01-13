@@ -16,14 +16,6 @@ nav {
         height: 3vh;
         margin-right: 0.5rem;
     }
-
-    .home-link {
-        padding: 1vw;
-    
-        &:hover {
-            cursor: pointer;
-        }  
-    }
     
     ul {
         padding: 0; 
@@ -36,10 +28,9 @@ nav {
             -moz-user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
-            display: flex;
-            align-items: center;
             position: relative;
             z-index: 1;
+            margin: 0 1vw;
     
             &:after {
                 content: '';
@@ -51,24 +42,27 @@ nav {
                 position: absolute;
                 transition: 0.8s;
                 z-index: -1;
-                margin: 0 auto;
-                bottom: 20%;
+                bottom: 5%;
+                left: 0;
             }
     
             &:hover:after {
-                width: 90%;
+                width: 100%;
             }
 
             .home-link {
                 font-weight: 300;
                 font-size: 0.7rem;
                 text-decoration: none;
-                padding: 1vw;
                 color: $main-color;
                 user-select: none;
                 -moz-user-select: none;
                 -webkit-user-select: none;
                 -ms-user-select: none;
+
+                &:hover {
+                    cursor: pointer;
+                }  
             }
             
             .nav-link:hover {
@@ -84,7 +78,7 @@ nav {
 
             li {
                 &:after {
-                    bottom: 35%;
+                    bottom: 5%;
                 }
                 .home-link {
                     font-size: 0.8rem;
