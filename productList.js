@@ -6,6 +6,7 @@ export const products = [
         imageUrl: '../img/incenseholder.jpg',
         images: ['../img/incenseholder.jpg'],
         price: 18,
+        quantity: [1]
     },
     {
         id: '2',
@@ -14,6 +15,7 @@ export const products = [
         imageUrl: '../img/mushroom.jpg',
         images: ['../img/mushroom.jpg'],
         price: 20,
+        quantity: [1]
     },
     {
         id: '3',
@@ -22,6 +24,7 @@ export const products = [
         imageUrl: '../img/woodenspatula.jpg',
         images: ['../img/woodenspatula.jpg'],
         price: 15,
+        quantity: [1]
     },
     {
         id: '4',
@@ -30,6 +33,7 @@ export const products = [
         imageUrl: '../img/woodenspoon.jpg',
         images: ['../img/woodenspoon.jpg'],
         price: 15,
+        quantity: [1, 2, 3, 4, 5]
     },
     {
         id: '5',
@@ -38,6 +42,7 @@ export const products = [
         imageUrl: '../img/oakbughotel.jpg',
         images: ['../img/oakbughotel.jpg', '../img/bughotel2.jpg', '../img/bughotel3.jpg'],
         price: 70,
+        quantity: [1]
     },
     {
         id: '6',
@@ -46,8 +51,8 @@ export const products = [
         imageUrl: '../img/tealightholder.jpg',
         images: ['../img/tealightholder.jpg'],
         price: 10,
+        quantity: [1]
     },
-
     {
         id: '7',
         name: 'Oak Stool',
@@ -55,5 +60,6 @@ export const products = [
         imageUrl: '../img/oakstool.jpg',
         images: ['../img/oakstool.jpg'],
         price: 90,
+        quantity: [1],
     },
 ]

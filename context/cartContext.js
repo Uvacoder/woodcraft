@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useReducer } from "react";
+import { createContext, useContext, useReducer } from "react";
 import { getCookie, setCookie } from "../hooks/useCookie";
 
 const CartStateContext = createContext();
@@ -8,12 +8,22 @@ const reducer = (state, action) => {
 
     switch (action.type) {
         case 'ADD_ITEM':
-            let addItem = [...state, action.item]
-            setCookie('cart', addItem)
+            let addItemCheck = [...state].filter((el) => {
+                return el.id === action.item.id
+            })
+            if (addItemCheck.length === 0) {
+                let addItem = [...state, action.item]
+                setCookie('cart', addItem)
+            }
             return getCookie('cart')
         case 'BUY_NOW':
-            let buyNow = [...state, action.item]
-            setCookie('cart', buyNow)
+            let buyItemCheck = [...state].filter((el) => {
+                return el.id === action.item.id
+            })
+            if (buyItemCheck.length === 0) {
+                let buyNow = [...state, action.item]
+                setCookie('cart', buyNow)
+            }
             return getCookie('cart')
         case 'REMOVE_ITEM':
             let removeItem = [...state];

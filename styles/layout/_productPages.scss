@@ -48,6 +48,7 @@
         position: relative;
         padding: 5%;
         width: 80%;
+        overflow: hidden;
 
         .product-page-link {
             font-weight: bold;
@@ -92,7 +93,28 @@
             }
         }
 
+        .already-in-cart-message {
+            position: absolute;
+            bottom: 0vh;
+            border: 2px solid $main-color;
+            padding: 0.5rem 4rem;
+            background: $main-color;
+            color: $second-color;
+            border-radius: 20px;
+        }
+    
+        .added-to-cart-mesage {
+            position: absolute;
+            bottom: 0vh;
+            border: 2px solid $main-color;
+            padding: 0.5rem 4rem;
+            background: $main-color;
+            color: $second-color;
+            border-radius: 20px;
+        }
     }
+
+   
 
     
 

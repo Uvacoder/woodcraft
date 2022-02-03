@@ -19,7 +19,6 @@
 }
 
 .cart-home-link {
-    padding: 1vw;
 
     &:hover {
         cursor: pointer;
@@ -27,22 +26,33 @@
 }
 
 .old-cart-image {
-    width: 25vw;
+    width: 50vw;
     position: absolute;
     top: 20vh;
     opacity: 0.5;
     bottom: 0;
+    left: 5vw;
 }
 
 .empty-cart-text {
     position: absolute;
-    left: 5%;
-    top: 40vh;
+    left: 10%;
+    top: 30vh;
     background: $main-color;
     font-size: 1.5rem;
     color: $second-color;
     width: fit-content;
     padding: 0.5rem;
+}
+
+@media (min-width: 850px) {
+    .old-cart-image {
+        width: 25vw;
+    }
+
+    .empty-cart-text {
+        top: 40vh;
+    }
 }
 
 .cart-nav {
@@ -53,6 +63,14 @@
     
         li {
             list-style-type: none;
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            position: relative;
+            z-index: 1;
+            margin: 0 1vw;
+            width: fit-content;
     
             &:after {
                 content: '';
@@ -61,12 +79,15 @@
                 height: 5px;
                 background-color: lighten($main-color, 40%);
                 display: block;
-                margin-top: -5px;
+                position: absolute;
                 transition: 0.8s;
+                z-index: -1;
+                bottom: 5%;
+                left: 0;
             }
     
             &:hover:after {
-                width: 90%;
+                width: 100%;
             }
         }
     }
@@ -94,8 +115,14 @@
     }
 
     img {
-        width: 15vw;
+        width: 10vw;
         padding: 1%;
+    }
+
+    .cart-quantity {
+        background: $second-color;
+        border-radius: 5px;
+        border: 1px solid $main-color;
     }
 }
 
@@ -132,16 +159,21 @@
 @media (min-width: 850px) {
     .cart-list-container {
         width: 80vw;
+        margin-bottom: 5vh;
     }
 
     .cart-button {
         font-size: 1rem;
-        padding: 0.75rem;
+        padding: 0.5rem 1rem;
     }
     .cart-item-container {
 
         img {
-            width: 6vw;
+            width: 5vw;
+        }
+
+        h2 {
+            font-size: 1.2rem;
         }
         
     }

@@ -1,18 +1,29 @@
 import { motion } from "framer-motion";
 import Link from "next/dist/client/link";
 import { useRouter } from "next/dist/client/router";
-import { useDispatchCart } from "../../context/cartContext";
+import { useCart, useDispatchCart } from "../../context/cartContext";
 import { useState } from "react";
 import Head from "next/head";
 import Footer from "../../components/footer";
 
 const Product = ({ product }) => {
 
+    const [itemAlreadyAdded, setItemAlreadyAdded] = useState(false)
+    const [itemAdded, setItemAdded] = useState(false)
+
     const router = useRouter();
     const dispatch = useDispatchCart();
+    const currentCart = useCart()
 
     const addToCart = (item) => {
-        dispatch({ type: 'ADD_ITEM', item })
+        let cartCheck = currentCart.filter(i => i.id === item.id)
+        if (cartCheck.length === 0) {
+            dispatch({ type: 'ADD_ITEM', item })
+            setItemAdded(true)
+        } else {
+            setItemAdded(false)
+            setItemAlreadyAdded(true)
+        }
     }
 
     const buyNow = async (item) => {
@@ -75,6 +86,8 @@ const Product = ({ product }) => {
                             <button onClick={() => addToCart(product)} className='cart-button'>Add To Cart</button>
                             <button onClick={() => buyNow(product)} className='cart-button'>Buy Now <span className='button-arrow'>→</span></button>
                         </div>
+                        {itemAlreadyAdded && <motion.p initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="already-in-cart-message">Item already in cart!</motion.p>}
+                        {itemAdded && <motion.p initial={{ y: 400, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="already-in-cart-message">Added to cart!</motion.p>}
                     </div >
                 </motion.div >
                 <Footer />

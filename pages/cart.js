@@ -5,6 +5,7 @@ import Head from "next/head";
 import { useCart } from "../context/cartContext";
 import { useRouter } from "next/dist/client/router";
 import Footer from "../components/footer";
+import { useState } from "react";
 
 const Cart = () => {
 
@@ -12,6 +13,7 @@ const Cart = () => {
     const router = useRouter()
 
     const dispatch = useDispatchCart();
+
     const totalPrice = items.reduce((total, item) => total + item.price, 0)
 
     const removeItem = async (index) => {
@@ -19,13 +21,23 @@ const Cart = () => {
     }
 
     const CartItem = ({ item, removeItem, index }) => {
+
+        const [currentQuantity, setCurrentQuantity] = useState(1)
+
         return (
             <div className='cart-item-container'>
                 <h2>{item.name}</h2>
                 <img src={item.imageUrl} />
-                <h3>£ {item.price}</h3>
-                <button className='cart-button' onClick={() => removeItem(index)}>Remove From Cart</button>
-            </div>
+                {/*<select class='cart-quantity' onChange={(e) => setCurrentQuantity(e.target.value)}>
+                    {item.quantity.map((q) => {
+                        return (
+                            <option id={`quantity -${index + 1}`}>{q}</option>
+                        )
+                    })}
+                </select>*/}
+                <h3>£ {item.price * currentQuantity}</h3>
+                <button className='cart-button' onClick={() => removeItem(index)}>Remove</button>
+            </div >
         )
     }
 
@@ -57,7 +69,7 @@ const Cart = () => {
                             </div>
                         </div>
                     </motion.div >}
-                {items.length === 0 && <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="empty-cart-container">
+                {items.length === 0 && <motion.div exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 2 }} className="empty-cart-container">
                     <motion.img exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 0.5 }} src='img/cart.jpg' className="old-cart-image" />
                     <h3 className="empty-cart-text">Oops, cart is empty.</h3>
                 </motion.div>}

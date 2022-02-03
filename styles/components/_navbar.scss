@@ -5,11 +5,11 @@ nav {
     align-items: center;
     position: fixed;
     height: 10vh;
-    width: 92vw;
+    width: 92%;
     border-bottom: 1.3px solid $main-color;
     background-color: $second-color;
     z-index: 10;
-    padding: 0 4vw;
+    padding: 0 4%;
 
     .nav-logo {
         border-radius: 50%;
@@ -59,6 +59,7 @@ nav {
                 -moz-user-select: none;
                 -webkit-user-select: none;
                 -ms-user-select: none;
+                font-weight: bold;
 
                 &:hover {
                     cursor: pointer;
@@ -81,7 +82,7 @@ nav {
                     bottom: 5%;
                 }
                 .home-link {
-                    font-size: 0.8rem;
+                    font-size: 0.9rem;
                 }
             }
             
